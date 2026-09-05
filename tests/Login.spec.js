@@ -7,6 +7,7 @@ test('test', async ({ page }) => {
     await page.getByPlaceholder("username").fill('Admin')
     await page.getByPlaceholder("password").fill('admin123')
     await page.locator('//button[@type="submit"]').click()
+    
     await page.locator('//a[@href="/web/index.php/pim/viewPimModule"]').click()
     await page.locator("//a[text()='Add Employee']").click()
     await page.getByPlaceholder('First Name').fill('indra')
